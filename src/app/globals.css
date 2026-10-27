@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+:root {
+  --brand-bg: #070809;
+  --brand-surface: #101115;
+  --brand-accent: #d4a389;
+  --brand-muted: #8e8880;
+
+  --background: var(--brand-bg);
+  --foreground: #fbf8f5;
+}
+
+@theme {
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-muted: var(--brand-muted);
+
+  --font-editorial: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
+  --font-body: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-script: var(--font-script), "Pinyon Script", cursive;
+
+  /* Aliases for convenience */
+  --font-serif: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-obsidian: #070809;
+  --color-obsidian-subtle: #0d0e12;
+  --color-charcoal: #131419;
+  --color-charcoal-card: #181a21;
+  --color-charcoal-border: rgba(212, 163, 137, 0.16);
+
+  --color-bronze: #d4a389;
+  --color-bronze-light: #f5d5c5;
+  --color-bronze-dark: #a37258;
+  --color-bronze-gold: #c5a059;
+
+  --color-ivory: #fbf8f5;
+  --color-ivory-dim: rgba(251, 248, 245, 0.75);
+  --color-ivory-faint: rgba(251, 248, 245, 0.45);
+}
+
+html {
+  background-color: #070809;
+  color: #fbf8f5;
+  scroll-behavior: auto !important; /* Lenis handles smooth scrolling */
+}
+
+body {
+  background-color: var(--brand-bg);
+  color: #fbf8f5;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(212, 163, 137, 0.35);
+  color: #ffffff;
+}
+
+/* Typography utilities */
+.font-editorial {
+  font-family: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-body {
+  font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-script), "Pinyon Script", cursive;
+}
+
+/* Film grain effect */
+.film-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  z-index: 25;
+}
+
+/* Glassmorphism surfaces */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(19, 20, 25, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 163, 137, 0.16);
+}
+
+.glass-pill {
+  background: rgba(19, 20, 25, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 163, 137, 0.22);
+}
+
+.bronze-glow {
+  text-shadow: 0 0 35px rgba(212, 163, 137, 0.45), 0 0 70px rgba(212, 163, 137, 0.2);
+}
+
+.bronze-gradient-text {
+  background: linear-gradient(110deg, #d4a389 0%, #f7ded3 45%, #d4a389 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070809;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 163, 137, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 163, 137, 0.5);
+}
