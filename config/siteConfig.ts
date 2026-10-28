@@ -13,7 +13,7 @@ export const siteConfig = {
     whatsapp: "919925862371", // Clean international format for wa.me URLs
     email: "rudradigitalstudio12@gmail.com",
     address: "Opposite Mota Mandir, Mota Mandir Vistar, Kosamba, Gujarat 394120",
-    mapsUrl: "https://maps.app.goo.gl/hmV7ksE4QSA995GDA",
+    mapsUrl: "https://maps.app.goo.gl/hF5WDhfBuWgo2Z8w5",
   },
   socials: {
     instagram: "https://instagram.com/rudradigitalstudio_kosamba",
